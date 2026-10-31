@@ -168,6 +168,7 @@ var __m = (function() {
       signIn: "Giri\u015F yap",
       checking: "Kontrol ediliyor\u2026",
       loginErr: "Kullan\u0131c\u0131 ad\u0131 veya \u015Fifre hatal\u0131.",
+      loginFailed: "Giri\u015F yap\u0131lamad\u0131. Ba\u011Flant\u0131n\u0131z\u0131 kontrol edip tekrar deneyin.",
       locked: function(n) {
         return "\xC7ok fazla hatal\u0131 deneme. " + Math.ceil(n / 60) + " dakika sonra tekrar deneyin.";
       },
@@ -327,6 +328,7 @@ var __m = (function() {
       signIn: "Sign in",
       checking: "Checking\u2026",
       loginErr: "Wrong username or password.",
+      loginFailed: "Couldn't sign in. Check your connection and try again.",
       locked: function(n) {
         return "Too many failed attempts. Try again in " + Math.ceil(n / 60) + " minutes.";
       },
@@ -470,7 +472,7 @@ var T = __m.T;
 
 // src/assets.gen.js
 var CSS_V = "4c5916eec7";
-var JS_V = "7a6e3478ed";
+var JS_V = "9edec473e3";
 
 // src/inline.gen.js
 var APP_JS = `(function(){
@@ -511,7 +513,7 @@ business:"\u0130\u015Fletme bilgileri",bizName:"\u0130\u015Fletme ad\u0131",tagl
 wifiF:"Wi-Fi bilgisi",wifiHint:"\xD6rne\u011Fin: A\u011F Cuginos, \u015Fifre kahve2026. Bo\u015F b\u0131rak\u0131l\u0131rsa g\xF6sterilmez.",hoursF:"\xC7al\u0131\u015Fma saatleri",closedF:"Kapal\u0131",annF:"Duyuru",annHint:"Men\xFCn\xFCn en \xFCst\xFCnde g\xF6sterilir. Bo\u015F b\u0131rak\u0131l\u0131rsa gizlenir.",
 dataTitle:"Yedek ve aktar\u0131m",dataHint:"Men\xFCn\xFCn tamam\u0131n\u0131 JSON olarak saklay\u0131n veya ba\u015Fka bir yere ta\u015F\u0131y\u0131n.",exportJson:"JSON indir",copyJson:"JSON kopyala",copied:"Kopyaland\u0131",copyFail:"Kopyalanamad\u0131. A\u015Fa\u011F\u0131daki metni elle se\xE7ip kopyalay\u0131n.",
 importTitle:"Yedekten geri y\xFCkle",importHint:"Bir men\xFC yede\u011Fini buraya yap\u0131\u015Ft\u0131r\u0131n. Mevcut tasla\u011F\u0131n yerini al\u0131r.",importBtn:"\u0130\xE7e aktar",importBad:"Bu ge\xE7erli bir men\xFC yede\u011Fi de\u011Fil.",imported:"\u0130\xE7e aktar\u0131ld\u0131. Kontrol edip yay\u0131nlay\u0131n.",
-stats:function(c,i,kb){return c+" kategori, "+i+" \xFCr\xFCn. Men\xFC verisi yakla\u015F\u0131k "+kb+" KB, s\u0131n\u0131r 4 MB.";},photoFail:"Foto\u011Fraf okunamad\u0131. JPG veya PNG deneyin.",loginLead:"Devam etmek i\xE7in giri\u015F yap\u0131n.",username:"Kullan\u0131c\u0131 ad\u0131",password:"\u015Eifre",show:"\u015Eifreyi g\xF6ster",hide:"\u015Eifreyi gizle",signIn:"Giri\u015F yap",checking:"Kontrol ediliyor\u2026",loginErr:"Kullan\u0131c\u0131 ad\u0131 veya \u015Fifre hatal\u0131.",locked:function(n){return"\xC7ok fazla hatal\u0131 deneme. "+Math.ceil(n/60)+" dakika sonra tekrar deneyin.";},logout:"\xC7\u0131k\u0131\u015F yap",creds:"Giri\u015F bilgileri",credsHint:"De\u011Fi\u015Fiklik hemen ge\xE7erli olur ve di\u011Fer cihazlar\u0131n oturumunu kapat\u0131r.",curPw:"Mevcut \u015Fifre",newUser:"Kullan\u0131c\u0131 ad\u0131",newPw:"Yeni \u015Fifre",newPw2:"Yeni \u015Fifre (tekrar)",updateCreds:"Giri\u015F bilgilerini g\xFCncelle",errCur:"Mevcut \u015Fifre hatal\u0131.",errShort:"Yeni \u015Fifre en az 10 karakter olmal\u0131.",errMatch:"Yeni \u015Fifreler e\u015Fle\u015Fmiyor.",errUser:"Kullan\u0131c\u0131 ad\u0131 girin.",credsUpdated:"Giri\u015F bilgileri g\xFCncellendi.",saveUnavailable:"\u0130ndirme burada kullan\u0131lam\u0131yor. JSON kopyala se\xE7ene\u011Fini kullan\u0131n."},
+stats:function(c,i,kb){return c+" kategori, "+i+" \xFCr\xFCn. Men\xFC verisi yakla\u015F\u0131k "+kb+" KB, s\u0131n\u0131r 4 MB.";},photoFail:"Foto\u011Fraf okunamad\u0131. JPG veya PNG deneyin.",loginLead:"Devam etmek i\xE7in giri\u015F yap\u0131n.",username:"Kullan\u0131c\u0131 ad\u0131",password:"\u015Eifre",show:"\u015Eifreyi g\xF6ster",hide:"\u015Eifreyi gizle",signIn:"Giri\u015F yap",checking:"Kontrol ediliyor\u2026",loginErr:"Kullan\u0131c\u0131 ad\u0131 veya \u015Fifre hatal\u0131.",loginFailed:"Giri\u015F yap\u0131lamad\u0131. Ba\u011Flant\u0131n\u0131z\u0131 kontrol edip tekrar deneyin.",locked:function(n){return"\xC7ok fazla hatal\u0131 deneme. "+Math.ceil(n/60)+" dakika sonra tekrar deneyin.";},logout:"\xC7\u0131k\u0131\u015F yap",creds:"Giri\u015F bilgileri",credsHint:"De\u011Fi\u015Fiklik hemen ge\xE7erli olur ve di\u011Fer cihazlar\u0131n oturumunu kapat\u0131r.",curPw:"Mevcut \u015Fifre",newUser:"Kullan\u0131c\u0131 ad\u0131",newPw:"Yeni \u015Fifre",newPw2:"Yeni \u015Fifre (tekrar)",updateCreds:"Giri\u015F bilgilerini g\xFCncelle",errCur:"Mevcut \u015Fifre hatal\u0131.",errShort:"Yeni \u015Fifre en az 10 karakter olmal\u0131.",errMatch:"Yeni \u015Fifreler e\u015Fle\u015Fmiyor.",errUser:"Kullan\u0131c\u0131 ad\u0131 girin.",credsUpdated:"Giri\u015F bilgileri g\xFCncellendi.",saveUnavailable:"\u0130ndirme burada kullan\u0131lam\u0131yor. JSON kopyala se\xE7ene\u011Fini kullan\u0131n."},
 en:{skip:"Skip to menu",lang:"Language",toDark:"Switch to dark theme",toLight:"Switch to light theme",categories:"Categories",search:"Search the menu",searchPh:"Coffee, toastie, cake",close:"Close",
 noResults:function(q){return"Nothing matches \u201C"+q+"\u201D.";},soldOut:"Sold out",
 openNow:function(t){return"Open now. Closes "+t;},closedNow:function(w,t){return"Closed now. Opens "+w+" "+t;},today:"today",tomorrow:"tomorrow",
@@ -535,7 +537,7 @@ business:"Business details",bizName:"Business name",tagline:"Tagline",address:"A
 wifiF:"Wi-Fi details",wifiHint:"For example: network Cuginos, password coffee2026. Hidden when empty.",hoursF:"Opening hours",closedF:"Closed",annF:"Announcement",annHint:"Shown at the top of the menu. Hidden when empty.",
 dataTitle:"Backup and transfer",dataHint:"Keep a copy of the whole menu as JSON, or move it somewhere else.",exportJson:"Download JSON",copyJson:"Copy JSON",copied:"Copied",copyFail:"Couldn't copy. Select the text below and copy it manually.",
 importTitle:"Restore from backup",importHint:"Paste a menu backup here. It replaces the current draft.",importBtn:"Import",importBad:"This isn't a valid menu backup.",imported:"Imported. Review it, then publish.",
-stats:function(c,i,kb){return c+" categories, "+i+" items. Menu data is about "+kb+" KB, limit 4 MB.";},photoFail:"Couldn't read that photo. Try a JPG or PNG.",loginLead:"Sign in to continue.",username:"Username",password:"Password",show:"Show password",hide:"Hide password",signIn:"Sign in",checking:"Checking\u2026",loginErr:"Wrong username or password.",locked:function(n){return"Too many failed attempts. Try again in "+Math.ceil(n/60)+" minutes.";},logout:"Sign out",creds:"Sign-in details",credsHint:"The change applies at once and signs other devices out.",curPw:"Current password",newUser:"Username",newPw:"New password",newPw2:"Repeat new password",updateCreds:"Update sign-in details",errCur:"Current password is wrong.",errShort:"New password must be at least 10 characters.",errMatch:"New passwords don't match.",errUser:"Enter a username.",credsUpdated:"Sign-in details updated.",saveUnavailable:"Downloads aren't available here. Use Copy JSON instead."}
+stats:function(c,i,kb){return c+" categories, "+i+" items. Menu data is about "+kb+" KB, limit 4 MB.";},photoFail:"Couldn't read that photo. Try a JPG or PNG.",loginLead:"Sign in to continue.",username:"Username",password:"Password",show:"Show password",hide:"Hide password",signIn:"Sign in",checking:"Checking\u2026",loginErr:"Wrong username or password.",loginFailed:"Couldn't sign in. Check your connection and try again.",locked:function(n){return"Too many failed attempts. Try again in "+Math.ceil(n/60)+" minutes.";},logout:"Sign out",creds:"Sign-in details",credsHint:"The change applies at once and signs other devices out.",curPw:"Current password",newUser:"Username",newPw:"New password",newPw2:"Repeat new password",updateCreds:"Update sign-in details",errCur:"Current password is wrong.",errShort:"New password must be at least 10 characters.",errMatch:"New passwords don't match.",errUser:"Enter a username.",credsUpdated:"Sign-in details updated.",saveUnavailable:"Downloads aren't available here. Use Copy JSON instead."}
 };
 
 var I={
@@ -781,7 +783,7 @@ function submitLogin(form){
     authed=true;pw.value="";openAdmin();
   },function(e){
     btn.disabled=false;btn.textContent=t.signIn;
-    err.textContent=e.status===429?t.locked(Math.max(60,(e.data&&e.data.retryAfter)||900)):e.status===401?t.loginErr:t.failed;
+    err.textContent=e.status===429?t.locked(Math.max(60,(e.data&&e.data.retryAfter)||900)):e.status===401?t.loginErr:t.loginFailed;
     pw.value="";pw.focus();
   });
 }
@@ -1032,7 +1034,8 @@ var KV_AUTH = "auth";
 var KV_SKEY = "skey";
 var COOKIE = "cg_session";
 var SESSION_TTL = 60 * 60 * 12;
-var ITER = 21e4;
+var ITER = 6e3;
+var MAX_ITER = 2e4;
 function hex(bytes) {
   return Array.prototype.map.call(new Uint8Array(bytes), function(b) {
     return ("0" + b.toString(16)).slice(-2);
@@ -1079,7 +1082,8 @@ async function getAuth(env) {
   const raw = await env.MENU_KV.get(KV_AUTH);
   if (raw) {
     try {
-      return JSON.parse(raw);
+      const rec2 = JSON.parse(raw);
+      if (rec2 && rec2.iter <= MAX_ITER) return rec2;
     } catch (e) {
     }
   }
